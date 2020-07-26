@@ -21,7 +21,7 @@
 {
     padding: 70px 30px 70px 30px;
     margin:2px auto;
-    background-color:sandybrown;
+    background-color:slategrey;
 }
 address
 {
@@ -29,4 +29,8 @@ address
     margin:0px;
     color: #0f0f0f;
 
+}
+body{
+    padding: 50px 0px 0px;
+    z-index: 0;
 }
