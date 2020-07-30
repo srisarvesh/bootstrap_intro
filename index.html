@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +19,70 @@
 </head>
 
 <body>
+    <div id="exampleModalLong" class="modal fade col-12 " role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-lg col-12 col-sm-8" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-12 col-md-3 mb-lg-4">
+                                <label for="numberofguests" class="col-form-label">Number of guests</label>
+                            </div> 
+                              <div class="col-1 col-md-1">
+                                <div><input type="radio" class="form-radio-input" name="guest" id="1" value=""><label for="1" class="form-radio-input ml-2"> 1</label></div>
+                              </div>
+                              <div class="col-1 col-md-1">
+                                <div><input type="radio" class="form-radio-input" name="guest" id="2" value=""><label for="2" class="form-radio-input ml-2"> 2</label></div>
+                              </div>
+                              <div class="col-1 col-md-1">
+                                <div><input type="radio" class="form-radio-input" name="guest" id="3" value=""><label for="3" class="form-radio-input ml-2"> 3</label></div>
+                              </div>
+                              <div class="col-1 col-md-1">
+                                <div><input type="radio" class="form-radio-input" name="guest" id="4" value=""><label for="4" class="form-radio-input ml-2"> 4</label></div>
+                              </div>
+                              <div class="col-1 col-md-1">
+                                <div><input type="radio" class="form-radio-input" name="guest" id="5" value=""><label for="5" class="form-radio-input ml-2"> 5</label></div>
+                              </div>
+                              <div class="col-1 col-md-1">
+                                <div><input type="radio" class="form-radio-input" name="guest" id="6" value=""><label for="6" class="form-radio-input ml-2"> 6</label></div>
+                             </div>                      
+                        </div>
+                        <div class="form-row mb-4">
+                            <div class="col-12 col-md-2 mr-4 "><label for="id" class="form-radio-input ml-1">Section</label></div>
+                            <div class="btn-group" role="group" aria-label="Basic example" data-toggle="buttons">
+                                <button id="sm" type="button"  class="btn btn-success active" checked="">Non-smoking</button>
+                                <button id="sm" type="button" class="btn btn-danger">smoking</button>
+                            </div>
+                        </div>
+                        <div  class="form-row ">
+                            <div class="col-12 col-md-2 mb-lg-4">Date and time</div>
+                            <div class="col-12 col-md-3">
+                                <input type="date" class="form-control ml-4" id="date" name="date" placeholder="date">
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <input type="time" class="form-control ml-4 " id="date" name="date" placeholder="time">
+                            </div>
+                        </div>
+                        <div class="form-row ml-1 mt-5 ">
+                            <div class="col-12  offset-2">
+                                <button type="submit" class="btn btn-dark" class="close" data-dismiss="modal">cancel</button>
+                                <button type="submit" class="btn btn-primary">Reserve</button>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -41,7 +106,7 @@
             
         </div>
     </nav>
-        <div id="loginModal" class="modal fade" role="dialog">
+    <div id="loginModal" class="modal fade" role="dialog" tabindex="-1">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
             <div class="modal-content">
@@ -68,6 +133,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="form-row">
                             <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
@@ -77,6 +143,7 @@
             </div>
         </div>
     </div>
+    
 
     <header class="jumbotron">
         <div class="container">
@@ -91,15 +158,15 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-3">
-                   <a href="#form" data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
-                    data-placement="bottom" class="btn btn-block nav-link btn-sm btn-warning" role="button">Reserve Table</a> 
+                    <button type="button" class="btn btn-block btn-sm btn-warning" data-toggle="modal" data-target="#exampleModalLong">
+                        Reserve Table
+                    </button>
                 </div>
                 
             </div>
         </div>
     </header>
-
-    <div class="container">
+        <div class="container">
         <div class="row row-content">
             <div class="col">
                 <div id="mycarousel" class="carousel slide" data-ride="carousel">
@@ -151,6 +218,14 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -217,52 +292,7 @@
                 </div>
             </div>
         </div>
-        <div class="row row-content align-items-center justify-content-center" id="form">
-            <div class="col-12 col-sm-8">
-                <div class="card">
-                    <h3 class="card-header bg-primary text-white">Reserve a table</h3>
-                   <div class="card-body">
-                       <div class="row ml-1 mb-3">
-                            <div class="col-12 col-md-2 mb-lg-4">Number of guests</div>
-                             <div class="col-1 col-md-1">
-                               <div><input type="radio" class="form-radio-input" name="guest" id="1" value=""><label for="1" class="form-radio-input ml-1"> 1</label></div>
-                             </div>
-                             <div class="col-1 col-md-1">
-                               <div><input type="radio" class="form-radio-input" name="guest" id="2" value=""><label for="2" class="form-radio-input ml-1"> 2</label></div>
-                             </div>
-                             <div class="col-1 col-md-1">
-                               <div><input type="radio" class="form-radio-input" name="guest" id="3" value=""><label for="3" class="form-radio-input ml-1"> 3</label></div>
-                             </div>
-                             <div class="col-1 col-md-1">
-                               <div><input type="radio" class="form-radio-input" name="guest" id="4" value=""><label for="4" class="form-radio-input ml-1"> 4</label></div>
-                             </div>
-                             <div class="col-1 col-md-1">
-                               <div><input type="radio" class="form-radio-input" name="guest" id="5" value=""><label for="5" class="form-radio-input ml-1"> 5</label></div>
-                             </div>
-                             <div class="col-1 col-md-1">
-                               <div><input type="radio" class="form-radio-input" name="guest" id="6" value=""><label for="6" class="form-radio-input ml-1"> 6</label></div>
-                            </div>
-                       </div>
-                        <div class="row ml-1 mb-3">
-                            <div class="col-12 col-md-2 mb-lg-4">Date and time</div>
-                            <div class="col-12 col-md-3">
-                                <input type="date" class="form-control" id="date" name="date" placeholder="date">
-                            </div>
-                            <div class="col-12 col-md-7">
-                                <input type="time" class="form-control" id="date" name="date" placeholder="time">
-                            </div>
-
-                           
-                        </div>
-                        <div class="row ml-1 ">
-                            <div class="col-12 offset-md-2 ">
-                                <button type="submit" class="btn btn-primary">Reserve</button>
-                            </div>
-                        </div>
-                   </div>
-                </div>
-            </div>
-        </div>
+        
 
     </div>
 
@@ -314,12 +344,18 @@
       <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
       <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
       <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+      
       <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>z
-
+      $(document).ready(function(){
+          $("#mycarousel").carousel( { interval: 500 } );
+          $("#carousel-pause").click(function(){
+              $("#mycarousel").carousel('pause');
+          });
+          $("#carousel-play").click(function(){
+              $("#mycarousel").carousel('cycle');
+          });
+      });
+  </script>
 </body>
 
 </html>
