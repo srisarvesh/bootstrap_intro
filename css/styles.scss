@@ -35,6 +35,11 @@ $carousel-item-height: 300px;
  .modal-header{
   color: floralwhite; 
   background-color:$background-dark;
+  .close
+  {
+       color:floralwhite;
+
+  }
  }
     
 }
@@ -48,16 +53,16 @@ address{
     margin:0px;
     color:#0f0f0f;
 }
-.cs{
-    color:floralwhite;
-}
+
+    
+
 body{
     padding:50px 0px 0px 0px;
     z-index:0;
 }
 
 .navbar-dark {
-     background-color: $background-dark;
+     background-color: cornsilk;
 }
 
 .tab-content {

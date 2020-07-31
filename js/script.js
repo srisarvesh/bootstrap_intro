@@ -1,0 +1,47 @@
+$(document).ready(function()
+      {
+        $('#lg').click(function()
+           {
+            $('#openmodal').modal('show');
+           }
+         );
+         $('#lg1').click(function()
+         {
+            $('#openmodal').modal('hide');
+         });
+         $('#lg2').click(function()
+         {
+            $('#openmodal').modal('hide');
+         });
+         $('#lg3').click(function()
+         {
+            $('#exampleModalLong').modal('show');
+         });
+         $('#lg4').click(function()
+         {
+            $('#exampleModalLong').modal('hide');
+         });
+         $('#lg5').click(function()
+         {
+            $('#exampleModalLong').modal('hide');
+         });
+
+        $("#carouselButton").click(function()
+        {
+                if ($('#carouselButton').children('span').hasClass('fa-pause'))
+                 {
+                    $('#mycarousel').carousel('pause');
+                    $('#carouselButton').children('span').removeClass('fa-pause');
+                    $('#carouselButton').children('span').addClass('fa-play');
+                }
+                else 
+                {
+                if ($('#carouselButton').children('span').hasClass('fa-play'))
+                {
+                    $('#mycarousel').carousel('cycle');
+                    $('#carouselButton').children('span').removeClass('fa-play');
+                    $('#carouselButton').children('span').addClass('fa-pause');                    
+                }
+                }
+        });
+      });

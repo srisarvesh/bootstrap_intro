@@ -98,9 +98,9 @@
                     <li class="nav-item"><a class="nav-link " href="#"><span class="fa fa-list fa-lg"></span>Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-lg"></span>contact</a></li>
                 </ul>
-                <button id="lg" type="button"class="btn btn-primary btn-sm">
+                <a id="lg" >
                     <span class="fa fa-sign-in"></span> LOGIN
-                  </button>
+                </a>
             </div>
             
         </div>
@@ -217,12 +217,9 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
-                    <div class="btn-group" id="carouselButton"></div>
-                        <button class="btn btn-danger btn-sm" id="carousel">
-                            <span class="fa fa-pause"></span>
-                        </button>
-                        
-                    </div>
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <span id="carousel-button-icon" class="fa fa-pause"></span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -340,57 +337,8 @@
       <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
       <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
       <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-      <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-      
-    <script >
-      $(document).ready(function()
-      {
-        $('#lg').click(function()
-           {
-            $('#openmodal').modal('show');
-           }
-         );
-         $('#lg1').click(function()
-         {
-            $('#openmodal').modal('hide');
-         });
-         $('#lg2').click(function()
-         {
-            $('#openmodal').modal('hide');
-         });
-         $('#lg3').click(function()
-         {
-            $('#exampleModalLong').modal('show');
-         });
-         $('#lg4').click(function()
-         {
-            $('#exampleModalLong').modal('hide');
-         });
-         $('#lg5').click(function()
-         {
-            $('#exampleModalLong').modal('hide');
-         });
-
-        $("#carouselButton").click(function()
-        {
-                if ($('#carouselButton').children('span').hasClass('fa-pause'))
-                 {
-                    $('#mycarousel').carousel('pause');
-                    $('#carouselButton').children('span').removeClass('fa-pause');
-                    $('#carouselButton').children('span').addClass('fa-play');
-                }
-                else 
-                {
-                if ($('#carouselButton').children('span').hasClass('fa-play'))
-                {
-                    $('#mycarousel').carousel('cycle');
-                    $('#carouselButton').children('span').removeClass('fa-play');
-                    $('#carouselButton').children('span').addClass('fa-pause');                    
-                }
-                }
-        });
-      });
-    </script>
+      <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>    
+      <script src="js/script.js"></script>
 </body>
 
 </html>
